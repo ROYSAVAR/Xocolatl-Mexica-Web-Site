@@ -1703,21 +1703,29 @@ section,
   display: block;
 }
 
-.logo-overlay {
-  width: 800px !important;
-  height: auto !important;
-   margin: 90px auto 30px auto; /* 30px arriba, centrado horizontal, 30px abajo */
-  display: block;
+.carousel-container {
+  text-align: center;
+  padding: 0 15px;
 }
 
-.carousel-container p {
-  text-align: center;
-  color: #fff; /* si usas fondo oscuro */
-  max-width: 800px;
-  margin: 10px auto;
-  font-size: 18px;
-  line-height: 1.6;
+.logo-overlay {
+  max-width: 800px; /* Tamaño máximo en desktop */
+  width: auto;
+  height: auto;
+  max-height: 325px; /* Limita alto máximo para no crecer demasiado */
+  margin: 90px auto 30px auto;
+  display: inline-block; /* Para que tome solo el espacio necesario */
 }
+
+@media (max-width: 768px) {
+  .logo-overlay {
+    max-width: 90%;
+    max-height: 120px; /* Más pequeño en móvil */
+    margin: 40px auto 20px auto;
+    display: inline-block;
+  }
+}
+
 
 
 
