@@ -1155,7 +1155,9 @@ section,
 .specials .nav-link.active {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  background-color: var(--background-color);
+  /*background-color: var(--background-color);*/
+  background-color: #e9c9ac; /* un beige claro */
+
 }
 
 .specials .tab-pane.active {
