@@ -1156,10 +1156,11 @@ section,
 }
 
 .specials .nav-link.active {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-color: #e9c9ac; /* un beige claro */
+  background-color: #e9c9ac !important;
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
+
 
 .specials .tab-pane.active {
   animation: fadeIn 0.5s ease-out;
