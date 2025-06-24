@@ -1125,7 +1125,6 @@ section,
   font-family: var(--nav-font);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
-
 /*--------------------------------------------------------------
 # Specials Section
 --------------------------------------------------------------*/
@@ -1146,10 +1145,20 @@ section,
   border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   font-weight: 600;
   font-size: 15px;
+
+  /* Evita resaltado azul en móviles */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 .specials .nav-link:hover {
   color: var(--accent-color);
+}
+
+.specials .nav-link.active {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-color: #e9c9ac; /* un beige claro */
 }
 
 .specials .tab-pane.active {
@@ -1170,27 +1179,18 @@ section,
   margin-bottom: 0;
 }
 
+/* Evita que se vea azul en móviles en todos los estados */
 .specials .nav-link:active,
 .specials .nav-link:focus,
 .specials .nav-link:visited {
   color: var(--accent-color) !important;
   background-color: #e9c9ac !important;
   text-decoration: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/*
-@media (max-width: 992px) {
-  .specials .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .specials .nav-link.active {
-    color: var(--accent-color);
-    background: var(--accent-color);
-  }
-}*/
-
+/* Mobile view styles */
 @media (max-width: 992px) {
   .specials .nav-link {
     border: 0;
@@ -1206,6 +1206,8 @@ section,
   .specials .nav-link:focus {
     color: #ffffff !important;
     background: var(--accent-color) !important;
+    outline: none;
+    box-shadow: none;
   }
 }
 
